@@ -121,12 +121,5 @@ export const Hero = ({
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60">
-        <div className="flex flex-col items-center space-y-2 mx-[10px]">
-          <span className="text-sm font-medium">Explore below</span>
-          <div className="w-px h-8 bg-white/30 animate-pulse" />
-        </div>
-      </div>
     </section>;
 };

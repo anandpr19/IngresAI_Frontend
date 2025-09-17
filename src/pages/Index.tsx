@@ -42,6 +42,15 @@ const Index = () => {
 
       <Hero onDemoClick={handleDemoClick} />
       <Features />
+      
+      {/* Scroll Indicator */}
+      <div className="flex justify-center py-8">
+        <div className="flex flex-col items-center space-y-2 animate-bounce">
+          <span className="text-sm font-medium text-muted-foreground">Continue exploring</span>
+          <div className="w-px h-8 bg-border animate-pulse" />
+        </div>
+      </div>
+      
       <Analytics />
       <Footer />
       
