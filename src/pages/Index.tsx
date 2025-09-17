@@ -4,59 +4,47 @@ import { Features } from "@/components/Features";
 import { DemoChat } from "@/components/DemoChat";
 import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
-
 const Index = () => {
   const [isDemoOpen, setIsDemoOpen] = useState(false);
-
   const handleDemoClick = () => {
     setIsDemoOpen(true);
   };
-
   const handleDemoClose = () => {
     setIsDemoOpen(false);
   };
-
-  return (
-    <main className="min-h-screen bg-background">
+  return <main className="min-h-screen bg-background">
       {/* SEO Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "INGRES AI",
+        "description": "Revolutionary AI-powered platform for groundwater intelligence in India",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "creator": {
+          "@type": "Organization",
           "name": "INGRES AI",
-          "description": "Revolutionary AI-powered platform for groundwater intelligence in India",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web Browser",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "INR"
-          },
-          "creator": {
-            "@type": "Organization",
-            "name": "INGRES AI",
-            "url": "https://ingres-ai.com"
-          }
-        })}
+          "url": "https://ingres-ai.com"
+        }
+      })}
       </script>
 
       <Hero onDemoClick={handleDemoClick} />
       <Features />
       
       {/* Scroll Indicator */}
-      <div className="flex justify-center py-8">
-        <div className="flex flex-col items-center space-y-2 animate-bounce">
-          <span className="text-sm font-medium text-muted-foreground">Continue exploring</span>
-          <div className="w-px h-8 bg-border animate-pulse" />
-        </div>
-      </div>
+      
       
       <Analytics />
       <Footer />
       
       <DemoChat isOpen={isDemoOpen} onClose={handleDemoClose} />
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
