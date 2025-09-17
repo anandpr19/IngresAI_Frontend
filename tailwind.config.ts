@@ -13,12 +13,26 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        /* INGRES AI Brand Colors */
+        "deep-sea": "hsl(var(--deep-sea))",
+        "teal-accent": "hsl(var(--teal-accent))",
+        "sand-warm": "hsl(var(--sand-warm))",
+        "navy-dark": "hsl(var(--navy-dark))",
+        "ocean-light": "hsl(var(--ocean-light))",
+        "teal-light": "hsl(var(--teal-light))",
+        "sand-light": "hsl(var(--sand-light))",
+        "navy-medium": "hsl(var(--navy-medium))",
+        
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -84,6 +98,24 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "gradient-flow": "gradient-flow 8s ease-in-out infinite",
+        "float": "float 6s ease-in-out infinite",
+        "ripple": "ripple 4s ease-out infinite",
+        "draw-line": "draw-line 2s ease-out forwards",
+      },
+      backgroundImage: {
+        "gradient-ocean": "var(--gradient-ocean)",
+        "gradient-sand": "var(--gradient-sand)",
+        "gradient-hero": "var(--gradient-hero)",
+      },
+      boxShadow: {
+        "soft": "var(--shadow-soft)",
+        "ocean": "var(--shadow-ocean)",
+        "teal": "var(--shadow-teal)",
+      },
+      transitionTimingFunction: {
+        "smooth": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+        "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
       },
     },
   },
