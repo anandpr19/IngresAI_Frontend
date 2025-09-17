@@ -12,7 +12,39 @@ export const Hero = ({ onDemoClick }: HeroProps) => {
       {/* Animated Background */}
       <div className="absolute inset-0 hero-gradient">
         <div className="ripple-container absolute inset-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20">
+          {/* Background Water Droplets */}
+          <div className="absolute top-[15%] left-[10%] float-animation opacity-10" style={{ animationDelay: '0.5s' }}>
+            <Droplets className="w-4 h-4 text-teal-light" />
+          </div>
+          <div className="absolute top-[25%] right-[15%] float-animation opacity-8" style={{ animationDelay: '1.5s' }}>
+            <Droplets className="w-3 h-3 text-ocean-light" />
+          </div>
+          <div className="absolute top-[35%] left-[80%] float-animation opacity-12" style={{ animationDelay: '3s' }}>
+            <Droplets className="w-5 h-5 text-sand-warm" />
+          </div>
+          <div className="absolute top-[45%] left-[5%] float-animation opacity-6" style={{ animationDelay: '4.5s' }}>
+            <Droplets className="w-4 h-4 text-teal-accent" />
+          </div>
+          <div className="absolute top-[55%] right-[25%] float-animation opacity-9" style={{ animationDelay: '2.8s' }}>
+            <Droplets className="w-3 h-3 text-ocean-light" />
+          </div>
+          <div className="absolute top-[65%] left-[70%] float-animation opacity-7" style={{ animationDelay: '1.2s' }}>
+            <Droplets className="w-6 h-6 text-teal-light" />
+          </div>
+          <div className="absolute top-[75%] left-[20%] float-animation opacity-5" style={{ animationDelay: '3.7s' }}>
+            <Droplets className="w-4 h-4 text-sand-warm" />
+          </div>
+          <div className="absolute top-[85%] right-[40%] float-animation opacity-8" style={{ animationDelay: '0.8s' }}>
+            <Droplets className="w-5 h-5 text-ocean-light" />
+          </div>
+          <div className="absolute top-[20%] left-[60%] float-animation opacity-6" style={{ animationDelay: '5.2s' }}>
+            <Droplets className="w-3 h-3 text-teal-accent" />
+          </div>
+          <div className="absolute top-[40%] right-[60%] float-animation opacity-11" style={{ animationDelay: '2.3s' }}>
+            <Droplets className="w-4 h-4 text-teal-light" />
+          </div>
+        </div>
       </div>
       
       {/* Floating Elements */}
