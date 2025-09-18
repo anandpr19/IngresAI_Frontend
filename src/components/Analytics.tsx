@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -13,6 +14,7 @@ import {
 } from "lucide-react";
 
 export const Analytics = () => {
+  const navigate=useNavigate();
   const [timeRange, setTimeRange] = useState([2020]);
   
   // Mock data for demonstration
@@ -268,7 +270,7 @@ export const Analytics = () => {
                 </div>
               </div>
 
-              <Button className="w-full bg-deep-sea hover:bg-deep-sea/90 text-white">
+              <Button onClick={() => navigate("/login")}className="w-full bg-deep-sea hover:bg-deep-sea/90 text-white" >
                 View Detailed Analytics
               </Button>
             </div>
@@ -281,6 +283,7 @@ export const Analytics = () => {
             Ready to explore comprehensive groundwater analytics?
           </p>
           <Button
+            onClick={() => navigate("/login")}
             size="lg"
             className="bg-gradient-to-r from-deep-sea to-teal-accent hover:from-deep-sea/90 hover:to-teal-accent/90 text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-ocean"
           >

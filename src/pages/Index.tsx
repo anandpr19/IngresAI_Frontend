@@ -34,7 +34,6 @@ const Index = () => {
         }
       })}
       </script>
-
       <Hero onDemoClick={handleDemoClick} />
       <Features />
       
